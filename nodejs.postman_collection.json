@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "a238cf25-7d08-4958-8ead-2f6c9292c4c6",
+		"name": "nodejs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "aluno",
+			"item": [
+				{
+					"name": "consulta geral aluno",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/aluno",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"aluno"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gravar aluno",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Christian\",\r\n    \"sobrenome\":\"Cardoso\",\r\n    \"idade\": 19\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/aluno",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"aluno"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consulta geral aluno filtros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/aluno/filtros?nome=christian&sobrenome=cardoso",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"aluno",
+								"filtros"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "christian"
+								},
+								{
+									"key": "sobrenome",
+									"value": "cardoso"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consulta geral aluno param",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/aluno/pesquisa/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"aluno",
+								"pesquisa",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
